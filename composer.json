@@ -1,12 +1,10 @@
 {
     "name": "phpclient/syncthing",
-    "description": "PHP Client for Syncthing",
+    "description": "PHP Client for Syncthing API",
     "type": "library",
     "require": {
-        "php": "^8.3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "11.2.x-dev"
+        "php": "^8.3",
+        "saloonphp/saloon": "^3.9"
     },
     "license": "MIT",
     "autoload": {
@@ -14,5 +12,15 @@
             "PhpClient\\Syncthing\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "symfony/var-dumper": "^7.1",
+        "pestphp/pest": "^2.34",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
