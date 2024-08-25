@@ -17,7 +17,7 @@ use Saloon\Exceptions\Request\RequestException;
 final readonly class CommonActions
 {
     public function __construct(
-        private Syncthing $syncthing,
+        private SyncthingClient $client,
     ) {
     }
 
@@ -27,10 +27,10 @@ final readonly class CommonActions
     public function ping(): bool
     {
         $request = new GetSystemPingRequest();
-        $response = $this->syncthing->send(request: $request);
+        $response = $this->client->send(request: $request);
 
         /** @var Result $result */
-        $result = $response->dto();
+        $result = $response->dtoOrFail();
 
         return $result->bool;
     }
@@ -41,7 +41,7 @@ final readonly class CommonActions
     public function isRestartRequired(): bool
     {
         $request = new GetConfigRestartRequiredRequest();
-        $response = $this->syncthing->send(request: $request);
+        $response = $this->client->send(request: $request);
         /** @var Result $result */
         $result = $response->dtoOrFail();
 
@@ -59,7 +59,7 @@ final readonly class CommonActions
     public function getConfigOfDevice(string $deviceId): Device
     {
         $request = new GetConfigDevicesIdRequest($deviceId);
-        $response = $this->syncthing->send($request);
+        $response = $this->client->send($request);
         /** @var Device $result */
         $result = $response->dtoOrFail();
 
@@ -83,7 +83,7 @@ final readonly class CommonActions
         // todo: other config options
         );
 
-        $response = $this->syncthing->send($request);
+        $response = $this->client->send($request);
 
         return $response->dtoOrFail();
     }

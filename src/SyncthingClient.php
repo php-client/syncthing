@@ -6,7 +6,7 @@ namespace PhpClient\Syncthing;
 
 use Saloon\Http\Connector;
 
-final class Syncthing extends Connector
+final class SyncthingClient extends Connector
 {
     public readonly CommonActions $actions;
 
@@ -14,7 +14,7 @@ final class Syncthing extends Connector
         private readonly string $baseUrl,
         private readonly string $token
     ) {
-        $this->actions = new CommonActions(syncthing: $this);
+        $this->actions = new CommonActions(client: $this);
     }
 
     public function resolveBaseUrl(): string
