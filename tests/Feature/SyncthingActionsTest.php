@@ -15,12 +15,12 @@ $deviceId = $_ENV['SYNCTHING_TEST_DEVICE_ID'] ?? '';
 $syncthing = new SyncthingClient(token: $token, baseUrl: $baseUrl);
 
 test('Syncthing action "Get config of device"', closure: function () use ($syncthing, $deviceId) {
-    $result = $syncthing->configDevicesResource()->deviceGet(deviceId: $deviceId)->dto();
+    $result = $syncthing->configDevicesResource()->deviceGet(device: $deviceId)->dto();
     expect(value: $result)->toBeInstanceOf(class: Device::class);
 });
 
 test('Syncthing action "Edit config of device"', function () use ($syncthing, $deviceId) {
-    $result = $syncthing->configDevicesResource()->devicePatch(deviceId: $deviceId, untrusted: false)->dto();
+    $result = $syncthing->configDevicesResource()->devicePatch(device: $deviceId, untrusted: false)->dto();
     expect(value: $result->isTrue())->toBeTrue();
 });
 

@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PhpClient\Syncthing\Requests\Db;
+
+use Saloon\Enums\Method;
+use Saloon\Http\Request;
+
+use function array_filter;
+
+/**
+ * https://docs.syncthing.net/rest/db-completion-get.html  Documentation
+ */
+final class DbCompletionGetRequest extends Request
+{
+    protected Method $method = Method::GET;
+
+    public function __construct(
+        private readonly ?string $folder = null,
+        private readonly ?string $device = null,
+    )
+    {
+    }
+
+    public function resolveEndpoint(): string
+    {
+        return '/rest/db/completion';
+    }
+
+    protected function defaultQuery(): array
+    {
+        return array_filter(array: [
+            'folderId' => $this->folder,
+            'deviceId' => $this->device,
+        ]);
+    }
+}
