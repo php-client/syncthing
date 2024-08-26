@@ -8,7 +8,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
- * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html
+ * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html  Documentation
  */
 final class ClusterPendingFoldersGetRequest extends Request
 {

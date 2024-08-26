@@ -8,7 +8,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
- * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html
+ * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html  Documentation
  */
 final class ClusterPendingDevicesDeleteRequest extends Request
 {

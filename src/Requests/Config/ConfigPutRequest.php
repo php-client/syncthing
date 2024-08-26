@@ -8,7 +8,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#rest-config
+ * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
  */
 final class ConfigPutRequest extends Request
 {

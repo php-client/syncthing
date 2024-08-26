@@ -10,7 +10,7 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
+ * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
  */
 final class ConfigFoldersFolderPutRequest extends Request implements HasBody
 {

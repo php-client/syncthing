@@ -14,13 +14,14 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/dev/rest.html#cluster-endpoints
+ * @see https://docs.syncthing.net/dev/rest.html#cluster-endpoints  Documentation
  */
 final class ClusterResource extends BaseResource
 {
     /**
+     * @see https://docs.syncthing.net/rest/cluster-pending-devices-get.html  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/cluster-pending-devices-get.html
      */
     public function pendingDevicesGet(): Response
     {
@@ -30,8 +31,9 @@ final class ClusterResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html
      */
     public function pendingDevicesDelete(string $deviceId): Response
     {
@@ -43,8 +45,9 @@ final class ClusterResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html
      */
     public function pendingFoldersGet(): Response
     {
@@ -54,8 +57,9 @@ final class ClusterResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/cluster-pending-folders-delete.html  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/cluster-pending-folders-delete.html
      */
     public function pendingFoldersDelete(string $folderId): Response
     {

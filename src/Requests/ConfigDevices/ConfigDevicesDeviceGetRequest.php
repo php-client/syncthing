@@ -11,7 +11,7 @@ use Saloon\Http\Request;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
+ * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
  */
 final class ConfigDevicesDeviceGetRequest extends Request
 {

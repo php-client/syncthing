@@ -17,13 +17,14 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#config-endpoints
+ * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
  */
 final class ConfigFoldersResource extends BaseResource
 {
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices
      */
     public function get(): Response
     {
@@ -33,8 +34,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices
      */
     public function post(array $data): Response
     {
@@ -46,8 +48,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices
      */
     public function put(array $data): Response
     {
@@ -59,8 +62,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
      */
     public function folderGet(string $folderId): Response
     {
@@ -72,8 +76,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
      */
     public function folderPut(string $folderId, array $data): Response
     {
@@ -86,8 +91,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
      */
     public function folderPatch(string $folderId, array $data): Response
     {
@@ -100,8 +106,9 @@ final class ConfigFoldersResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
      */
     public function folderDelete(string $folderId): Response
     {

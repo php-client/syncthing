@@ -21,11 +21,15 @@ use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
+/**
+ * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
+ */
 final class ConfigResource extends BaseResource
 {
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config
      */
     public function get(): Response
     {
@@ -35,8 +39,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config
      */
     public function put(): Response
     {
@@ -46,8 +51,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required
      */
     public function restartRequiredGet(): Response
     {
@@ -57,8 +63,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function optionsGet(): Response
     {
@@ -68,8 +75,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function optionsPut(array $data): Response
     {
@@ -81,8 +89,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function optionsPatch(array $data): Response
     {
@@ -94,8 +103,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function ldapGet(): Response
     {
@@ -105,8 +115,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function ldapPut(array $data): Response
     {
@@ -118,8 +129,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function ldapPatch(array $data): Response
     {
@@ -131,8 +143,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function guiGet(): Response
     {
@@ -142,8 +155,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function guiPut(array $data): Response
     {
@@ -155,8 +169,9 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui
      */
     public function guiPatch(array $data): Response
     {

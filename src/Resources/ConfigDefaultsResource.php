@@ -18,13 +18,14 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#config-endpoints
+ * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
  */
 final class ConfigDefaultsResource extends BaseResource
 {
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function folderGet(): Response
     {
@@ -34,8 +35,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function folderPut(array $data): Response
     {
@@ -47,8 +49,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function folderPatch(array $data): Response
     {
@@ -60,8 +63,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function deviceGet(): Response
     {
@@ -71,8 +75,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function devicePut(array $data): Response
     {
@@ -84,8 +89,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device
      */
     public function devicePatch(array $data): Response
     {
@@ -97,8 +103,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores
      */
     public function ignoresGet(): Response
     {
@@ -108,8 +115,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
+     *
      * @throws FatalRequestException|RequestException
-     * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores
      */
     public function ignoresPut(array $data): Response
     {

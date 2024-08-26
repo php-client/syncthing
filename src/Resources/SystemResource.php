@@ -27,6 +27,8 @@ final class SystemResource extends BaseResource
     // todo: POST /rest/system/pause
 
     /**
+     * @see https://docs.syncthing.net/rest/system-ping-get.html#get-rest-system-ping  Documentation
+     *
      * @throws FatalRequestException|RequestException
      */
     public function pingGet(): Response

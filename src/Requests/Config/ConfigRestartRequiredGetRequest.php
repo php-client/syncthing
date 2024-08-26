@@ -12,7 +12,7 @@ use Saloon\Http\Request;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required
+ * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required  Documentation
  */
 final class ConfigRestartRequiredGetRequest extends Request
 {
