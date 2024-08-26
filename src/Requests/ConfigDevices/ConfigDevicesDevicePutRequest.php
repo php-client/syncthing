@@ -4,21 +4,23 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing\Requests\ConfigDevices;
 
-use PhpClient\Syncthing\Dto\Device;
-use PhpClient\Syncthing\Exceptions\SyncthingException;
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\Response;
+use Saloon\Traits\Body\HasJsonBody;
 
 /**
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id
  */
-final class ConfigDevicesDeviceGetRequest extends Request
+final class ConfigDevicesDevicePutRequest extends Request implements HasBody
 {
-    protected Method $method = Method::GET;
+    use HasJsonBody;
+
+    protected Method $method = Method::PUT;
 
     public function __construct(
         private readonly string $deviceId,
+        private readonly array $data,
     ) {
     }
 
@@ -27,11 +29,8 @@ final class ConfigDevicesDeviceGetRequest extends Request
         return "rest/config/devices/$this->deviceId";
     }
 
-    /**
-     * @throws SyncthingException
-     */
-    public function createDtoFromResponse(Response $response): Device
+    protected function defaultBody(): array
     {
-        return Device::fromArray(array:$response->array());
+        return $this->data;
     }
 }
