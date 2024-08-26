@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PhpClient\Syncthing\Requests;
+namespace PhpClient\Syncthing\Requests\Config;
 
 use JsonException;
 use PhpClient\Keenetic\Exceptions\KeeneticException;
@@ -11,7 +11,10 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
 
-final class GetConfigRestartRequiredRequest extends Request
+/**
+ * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required
+ */
+final class ConfigRestartRequiredGetRequest extends Request
 {
     protected Method $method = Method::GET;
 
@@ -26,7 +29,7 @@ final class GetConfigRestartRequiredRequest extends Request
     public function createDtoFromResponse(Response $response): Result
     {
         $requiresRestart = $response->object('requiresRestart')
-            ?? throw new KeeneticException('Unexpected response');
+            ?? throw KeeneticException::unexpectedResponse();
 
         return new Result(bool: $requiresRestart);
     }

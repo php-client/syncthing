@@ -2,12 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PhpClient\Syncthing\Requests;
+namespace PhpClient\Syncthing\Requests\Config;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
-final class GetConfigRequest extends Request
+/**
+ * @see https://docs.syncthing.net/rest/config.html#rest-config
+ */
+final class ConfigGetRequest extends Request
 {
     protected Method $method  = Method::GET;
 

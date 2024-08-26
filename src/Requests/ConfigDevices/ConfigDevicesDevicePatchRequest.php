@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PhpClient\Syncthing\Requests;
+namespace PhpClient\Syncthing\Requests\ConfigDevices;
 
 use PhpClient\Syncthing\Dto\Addresses;
 use PhpClient\Syncthing\Dto\Result;
@@ -15,7 +15,7 @@ use Saloon\Traits\Body\HasJsonBody;
 use function array_filter;
 use function is_null;
 
-final class PatchConfigDevicesIdRequest extends Request implements HasBody
+final class ConfigDevicesDevicePatchRequest extends Request implements HasBody
 {
     use HasJsonBody;
 

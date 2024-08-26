@@ -1,0 +1,68 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PhpClient\Syncthing\Resources;
+
+use PhpClient\Syncthing\Requests\Cluster\ClusterPendingDevicesDeleteRequest;
+use PhpClient\Syncthing\Requests\Cluster\ClusterPendingDevicesGetRequest;
+use PhpClient\Syncthing\Requests\Cluster\ClusterPendingFoldersDeleteRequest;
+use PhpClient\Syncthing\Requests\Cluster\ClusterPendingFoldersGetRequest;
+use Saloon\Exceptions\Request\FatalRequestException;
+use Saloon\Exceptions\Request\RequestException;
+use Saloon\Http\BaseResource;
+use Saloon\Http\Response;
+
+/**
+ * @see https://docs.syncthing.net/dev/rest.html#cluster-endpoints
+ */
+final class ClusterResource extends BaseResource
+{
+    /**
+     * @throws FatalRequestException|RequestException
+     * @see https://docs.syncthing.net/rest/cluster-pending-devices-get.html
+     */
+    public function pendingDevicesGet(): Response
+    {
+        return $this->connector->send(
+            request: new ClusterPendingDevicesGetRequest(),
+        );
+    }
+
+    /**
+     * @throws FatalRequestException|RequestException
+     * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html
+     */
+    public function pendingDevicesDelete(string $deviceId): Response
+    {
+        return $this->connector->send(
+            request: new ClusterPendingDevicesDeleteRequest(
+                deviceId: $deviceId,
+            ),
+        );
+    }
+
+    /**
+     * @throws FatalRequestException|RequestException
+     * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html
+     */
+    public function pendingFoldersGet(): Response
+    {
+        return $this->connector->send(
+            request: new ClusterPendingFoldersGetRequest(),
+        );
+    }
+
+    /**
+     * @throws FatalRequestException|RequestException
+     * @see https://docs.syncthing.net/rest/cluster-pending-folders-delete.html
+     */
+    public function pendingFoldersDelete(string $folderId): Response
+    {
+        return $this->connector->send(
+            request: new ClusterPendingFoldersDeleteRequest(
+                folderId: $folderId,
+            ),
+        );
+    }
+}

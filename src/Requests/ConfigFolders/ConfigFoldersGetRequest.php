@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PhpClient\Syncthing\Requests;
+namespace PhpClient\Syncthing\Requests\ConfigFolders;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
-final class GetConfigFoldersRequest extends Request
+final class ConfigFoldersGetRequest extends Request
 {
     protected Method $method  = Method::GET;
 
