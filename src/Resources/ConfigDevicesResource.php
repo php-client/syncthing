@@ -66,11 +66,11 @@ final class ConfigDevicesResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function deviceGet(string $deviceId): Response
+    public function deviceGet(string $device): Response
     {
         return $this->connector->send(
             request: new ConfigDevicesDeviceGetRequest(
-                deviceId: $deviceId,
+                device: $device,
             ),
         );
     }
@@ -80,11 +80,11 @@ final class ConfigDevicesResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function devicePut(string $deviceId, array $data): Response
+    public function devicePut(string $device, array $data): Response
     {
         return $this->connector->send(
             request: new ConfigDevicesDevicePutRequest(
-                deviceId: $deviceId,
+                device: $device,
                 data: $data,
             ),
         );
@@ -95,11 +95,11 @@ final class ConfigDevicesResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function devicePatch(string $deviceId, array $data): Response
+    public function devicePatch(string $device, array $data): Response
     {
         return $this->connector->send(
             request: new ConfigDevicesDevicePatchRequest(
-                deviceId: $deviceId,
+                device: $device,
                 data: $data,
             ),
         );
@@ -110,11 +110,11 @@ final class ConfigDevicesResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function deviceDelete(string $deviceId): Response
+    public function deviceDelete(string $device): Response
     {
         return $this->connector->send(
             request: new ConfigDevicesDeviceDeleteRequest(
-                deviceId: $deviceId,
+                device: $device,
             ),
         );
     }

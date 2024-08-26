@@ -18,13 +18,13 @@ final class ConfigDevicesDeviceGetRequest extends Request
     protected Method $method = Method::GET;
 
     public function __construct(
-        private readonly string $deviceId,
+        private readonly string $device,
     ) {
     }
 
     public function resolveEndpoint(): string
     {
-        return "rest/config/devices/$this->deviceId";
+        return "rest/config/devices/$this->device";
     }
 
     /**

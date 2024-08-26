@@ -15,12 +15,12 @@ final class ConfigDevicesDeviceDeleteRequest extends Request
     protected Method $method = Method::DELETE;
 
     public function __construct(
-        private readonly string $deviceId,
+        private readonly string $device,
     ) {
     }
 
     public function resolveEndpoint(): string
     {
-        return "rest/config/devices/$this->deviceId";
+        return "rest/config/devices/$this->device";
     }
 }

@@ -15,7 +15,7 @@ final class ClusterPendingDevicesDeleteRequest extends Request
     protected Method $method = Method::DELETE;
 
     public function __construct(
-        private readonly string $deviceId,
+        private readonly string $device,
     ) {
     }
 
@@ -27,7 +27,7 @@ final class ClusterPendingDevicesDeleteRequest extends Request
     protected function defaultQuery(): array
     {
         return [
-            'device' => $this->deviceId,
+            'device' => $this->device,
         ];
     }
 }

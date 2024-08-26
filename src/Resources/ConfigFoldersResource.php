@@ -66,11 +66,11 @@ final class ConfigFoldersResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function folderGet(string $folderId): Response
+    public function folderGet(string $folder): Response
     {
         return $this->connector->send(
             request: new ConfigFoldersFolderGetRequest(
-                folderId: $folderId,
+                folder: $folder,
             ),
         );
     }
@@ -80,11 +80,11 @@ final class ConfigFoldersResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function folderPut(string $folderId, array $data): Response
+    public function folderPut(string $folder, array $data): Response
     {
         return $this->connector->send(
             request: new ConfigFoldersFolderPutRequest(
-                folderId: $folderId,
+                folder: $folder,
                 data: $data,
             ),
         );
@@ -95,11 +95,11 @@ final class ConfigFoldersResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function folderPatch(string $folderId, array $data): Response
+    public function folderPatch(string $folder, array $data): Response
     {
         return $this->connector->send(
             request: new ConfigFoldersFolderPatchRequest(
-                folderId: $folderId,
+                folder: $folder,
                 data: $data,
             ),
         );
@@ -110,11 +110,11 @@ final class ConfigFoldersResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function folderDelete(string $folderId): Response
+    public function folderDelete(string $folder): Response
     {
         return $this->connector->send(
             request: new ConfigFoldersFolderDeleteRequest(
-                folderId: $folderId,
+                folder: $folder,
             ),
         );
     }

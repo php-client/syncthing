@@ -19,14 +19,14 @@ final class ConfigFoldersFolderPutRequest extends Request implements HasBody
     protected Method $method = Method::PUT;
 
     public function __construct(
-        private readonly string $folderId,
+        private readonly string $folder,
         private readonly array $data,
     ) {
     }
 
     public function resolveEndpoint(): string
     {
-        return "rest/config/folders/$this->folderId";
+        return "rest/config/folders/$this->folder";
     }
 
     protected function defaultBody(): array

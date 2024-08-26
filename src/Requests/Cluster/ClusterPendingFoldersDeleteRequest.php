@@ -15,7 +15,7 @@ final class ClusterPendingFoldersDeleteRequest extends Request
     protected Method $method = Method::DELETE;
 
     public function __construct(
-        private readonly string $folderId,
+        private readonly string $folder,
     ) {
     }
 
@@ -27,7 +27,7 @@ final class ClusterPendingFoldersDeleteRequest extends Request
     protected function defaultQuery(): array
     {
         return [
-            'folder' => $this->folderId,
+            'folder' => $this->folder,
         ];
     }
 }

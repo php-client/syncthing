@@ -19,14 +19,14 @@ final class ConfigDevicesDevicePutRequest extends Request implements HasBody
     protected Method $method = Method::PUT;
 
     public function __construct(
-        private readonly string $deviceId,
+        private readonly string $device,
         private readonly array $data,
     ) {
     }
 
     public function resolveEndpoint(): string
     {
-        return "rest/config/devices/$this->deviceId";
+        return "rest/config/devices/$this->device";
     }
 
     protected function defaultBody(): array

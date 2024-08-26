@@ -35,11 +35,11 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingDevicesDelete(string $deviceId): Response
+    public function pendingDevicesDelete(string $device): Response
     {
         return $this->connector->send(
             request: new ClusterPendingDevicesDeleteRequest(
-                deviceId: $deviceId,
+                device: $device,
             ),
         );
     }
@@ -61,11 +61,11 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingFoldersDelete(string $folderId): Response
+    public function pendingFoldersDelete(string $folder): Response
     {
         return $this->connector->send(
             request: new ClusterPendingFoldersDeleteRequest(
-                folderId: $folderId,
+                folder: $folder,
             ),
         );
     }
