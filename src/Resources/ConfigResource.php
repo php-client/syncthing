@@ -43,10 +43,12 @@ final class ConfigResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function put(): Response
+    public function put(array $data): Response
     {
         return $this->connector->send(
-            request: new ConfigPutRequest(),
+            request: new ConfigPutRequest(
+                data: $data
+            ),
         );
     }
 
