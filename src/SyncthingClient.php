@@ -121,9 +121,9 @@ final class SyncthingClient extends Connector
         );
     }
 
-    public function svcResource(): svcResource
+    public function svcResource(): SvcResource
     {
-        return new svcResource(
+        return new SvcResource(
             connector: $this,
         );
     }
