@@ -8,14 +8,14 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
- * @see https://docs.syncthing.net/rest/system-ping-get.html  Documentation
+ * @see https://docs.syncthing.net/rest/system-error-get.html  Documentation
  */
-final class SystemPingGetRequest extends Request
+final class SystemErrorGetRequest extends Request
 {
     protected Method $method = Method::GET;
 
     public function resolveEndpoint(): string
     {
-        return '/rest/system/ping';
+        return '/rest/system/error';
     }
 }
