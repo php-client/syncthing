@@ -11,7 +11,7 @@ use function array_filter;
 use function implode;
 
 /**
- * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events
+ * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events  Documentation
  */
 final class EventsGetRequest extends Request
 {
