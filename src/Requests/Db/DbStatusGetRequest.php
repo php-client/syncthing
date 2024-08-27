@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns information about the current status of a folder.
+ *
  * @see https://docs.syncthing.net/rest/db-status-get.html  Documentation
  */
 final class DbStatusGetRequest extends Request

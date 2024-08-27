@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Replaces LDAP configuration.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
  */
 final class ConfigLdapPutRequest extends Request implements HasBody

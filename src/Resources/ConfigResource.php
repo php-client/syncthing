@@ -27,6 +27,8 @@ use Saloon\Http\Response;
 final class ConfigResource extends BaseResource
 {
     /**
+     * Returns the entire config.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -39,6 +41,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces the entire config.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -53,6 +57,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Returns whether a restart of Syncthing is required for the current config to take effect.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -65,6 +71,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Returns configuration options.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -77,6 +85,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces configuration options.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -91,6 +101,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces part of configuration options.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -105,6 +117,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Returns LDAP configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -117,6 +131,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces LDAP configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -131,6 +147,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces part of LDAP configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -145,6 +163,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Returns GUI configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -157,6 +177,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces GUI configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -171,6 +193,8 @@ final class ConfigResource extends BaseResource
     }
 
     /**
+     * Replaces part of GUI configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
      *
      * @throws FatalRequestException|RequestException

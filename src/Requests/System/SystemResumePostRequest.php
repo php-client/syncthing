@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Resume the given device or all devices.
+ *
  * @see https://docs.syncthing.net/rest/system-resume-post.html  Documentation
  */
 final class SystemResumePostRequest extends Request

@@ -12,6 +12,8 @@ use Saloon\Http\Request;
 use Saloon\Http\Response;
 
 /**
+ * Returns whether a restart of Syncthing is required for the current config to take effect.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-restart-required  Documentation
  */
 final class ConfigRestartRequiredGetRequest extends Request

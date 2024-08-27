@@ -17,6 +17,8 @@ use Saloon\Http\Response;
 final class StatsResource extends BaseResource
 {
     /**
+     * Returns general statistics about devices.
+     *
      * @see https://docs.syncthing.net/rest/stats-device-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -29,6 +31,8 @@ final class StatsResource extends BaseResource
     }
 
     /**
+     * Returns general statistics about folders.
+     *
      * @see https://docs.syncthing.net/rest/stats-folder-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException

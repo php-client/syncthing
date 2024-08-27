@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the list of errors encountered during scanning or pulling.
+ *
  * @see https://docs.syncthing.net/rest/folder-errors-get.html  Documentation
  */
 final class FolderErrorsGetRequest extends Request

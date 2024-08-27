@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Removes the device for the given ID.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
  */
 final class ConfigDevicesDeviceDeleteRequest extends Request

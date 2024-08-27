@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the list of recent errors.
+ *
  * @see https://docs.syncthing.net/rest/system-error-get.html  Documentation
  */
 final class SystemErrorGetRequest extends Request

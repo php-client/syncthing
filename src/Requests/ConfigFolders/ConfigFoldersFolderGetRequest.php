@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the folder for the given ID.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
  */
 final class ConfigFoldersFolderGetRequest extends Request

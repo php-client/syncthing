@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Updates the content of the .stignore for folder.
+ *
  * @see https://docs.syncthing.net/rest/db-ignores-post.html  Documentation
  */
 final class DbIgnoresPostRequest extends Request implements HasBody

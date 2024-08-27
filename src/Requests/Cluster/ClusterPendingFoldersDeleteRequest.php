@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Remove records about a pending folder announced from a remote device.
+ *
  * @see https://docs.syncthing.net/rest/cluster-pending-folders-delete.html  Documentation
  */
 final class ClusterPendingFoldersDeleteRequest extends Request

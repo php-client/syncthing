@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the set of debug facilities and which of them are currently enabled.
+ *
  * @see https://docs.syncthing.net/rest/system-debug-get.html  Documentation
  */
 final class SystemDebugGetRequest extends Request

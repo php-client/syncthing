@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Lists folders which remote devices have offered to us, but are not yet shared from our instance to them.
+ *
  * @see https://docs.syncthing.net/rest/cluster-pending-folders-get.html  Documentation
  */
 final class ClusterPendingFoldersGetRequest extends Request

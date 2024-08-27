@@ -19,6 +19,8 @@ use Saloon\Http\Response;
 final class SvcResource extends BaseResource
 {
     /**
+     * Verifies and formats a device ID.
+     *
      * @see https://docs.syncthing.net/rest/svc-deviceid-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -33,6 +35,9 @@ final class SvcResource extends BaseResource
     }
 
     /**
+     * Returns a list of canonicalized localization codes, as picked up from the Accept-Language header
+     * sent by the browser.
+     *
      * @see https://docs.syncthing.net/rest/svc-lang-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -47,6 +52,8 @@ final class SvcResource extends BaseResource
     }
 
     /**
+     * Returns a strong random generated string (alphanumeric) of the specified length.
+     *
      * @see https://docs.syncthing.net/rest/svc-random-string-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -61,6 +68,8 @@ final class SvcResource extends BaseResource
     }
 
     /**
+     * Returns the data sent in the anonymous usage report.
+     *
      * @see https://docs.syncthing.net/rest/svc-report-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException

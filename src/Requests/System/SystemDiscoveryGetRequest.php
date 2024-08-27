@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the contents of the local discovery cache.
+ *
  * @see https://docs.syncthing.net/rest/system-discovery-get.html  Documentation
  */
 final class SystemDiscoveryGetRequest extends Request

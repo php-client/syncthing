@@ -11,6 +11,8 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
+ * Returns a health status.
+ *
  * @see https://docs.syncthing.net/rest/noauth-health-get.html  Documentation
  */
 final class NoauthResource extends BaseResource

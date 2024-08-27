@@ -10,6 +10,10 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasStringBody;
 
 /**
+ * Post with an error message to register a new error.
+ *
+ * The new error will be displayed on any active GUI clients.
+ *
  * @see https://docs.syncthing.net/rest/system-error-post.html  Documentation
  */
 final class SystemErrorPostRequest extends Request implements HasBody

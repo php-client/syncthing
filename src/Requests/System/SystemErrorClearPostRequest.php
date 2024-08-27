@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Remove all recent errors.
+ *
  * @see https://docs.syncthing.net/rest/system-error-clear-post.html  Documentation
  */
 final class SystemErrorClearPostRequest extends Request

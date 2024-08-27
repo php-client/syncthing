@@ -10,6 +10,11 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Request immediate scan.
+ *
+ * Requesting scan of a path that no longer exists, but previously did, is valid and will result in Syncthing
+ * noticing the deletion of the path in question.
+ *
  * @see https://docs.syncthing.net/rest/db-scan-post.html  Documentation
  */
 final class DbScanPostRequest extends Request

@@ -8,6 +8,11 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Request revert of a receive only folder.
+ *
+ * Reverting a folder means to undo all local changes.
+ * This API call does nothing if the folder is not a receive only folder.
+ *
  * @see https://docs.syncthing.net/rest/db-revert-post.html  Documentation
  */
 final class DbRevertPostRequest extends Request

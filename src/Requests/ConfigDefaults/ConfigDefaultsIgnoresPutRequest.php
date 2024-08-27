@@ -10,6 +10,9 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Replaces an object with a single lines attribute listing ignore patterns to be used by default on folders,
+ * as an array of single-line strings.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
  */
 final class ConfigDefaultsIgnoresPutRequest extends Request implements HasBody

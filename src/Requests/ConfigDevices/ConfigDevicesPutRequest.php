@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Takes an array of devices. If a given devices already exists, they are replaced, otherwise a new ones are added.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
  */
 final class ConfigDevicesPutRequest extends Request implements HasBody

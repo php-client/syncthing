@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the list of files which were changed locally in a receive-only folder.
+ *
  * @see https://docs.syncthing.net/rest/db-localchanged-get.html  Documentation
  */
 final class DbLocalchangedGetRequest extends Request

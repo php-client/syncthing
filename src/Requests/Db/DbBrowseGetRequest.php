@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Returns the directory tree of the global model.
+ *
  * @see https://docs.syncthing.net/rest/db-browse-get.html  Documentation
  */
 final class DbBrowseGetRequest extends Request

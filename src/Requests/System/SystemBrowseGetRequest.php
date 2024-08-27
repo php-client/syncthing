@@ -10,6 +10,10 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Returns a list of directories matching the path given by the optional parameter current.
+ *
+ * If the option current is not given, filesystem root paths are returned.
+ *
  * @see https://docs.syncthing.net/rest/system-browse-get.html  Documentation
  */
 final class SystemBrowseGetRequest extends Request

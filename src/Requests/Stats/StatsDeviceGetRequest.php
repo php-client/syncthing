@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns general statistics about devices.
+ *
  * @see https://docs.syncthing.net/rest/stats-device-get.html  Documentation
  */
 final class StatsDeviceGetRequest extends Request

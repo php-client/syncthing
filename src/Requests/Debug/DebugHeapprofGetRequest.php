@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Used to capture a profile of what Syncthing is doing with the heap memory.
+ *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-heapprof  Documentation
  */
 final class DebugHeapprofGetRequest extends Request

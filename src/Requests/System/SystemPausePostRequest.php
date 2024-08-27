@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Pause the given device or all devices.
+ *
  * @see https://docs.syncthing.net/rest/system-pause-post.html  Documentation
  */
 final class SystemPausePostRequest extends Request

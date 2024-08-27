@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Cause Syncthing to exit and not restart.
+ *
  * @see https://docs.syncthing.net/rest/system-shutdown-post.html  Documentation
  */
 final class SystemShutdownPostRequest extends Request

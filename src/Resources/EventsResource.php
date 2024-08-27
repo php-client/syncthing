@@ -17,6 +17,8 @@ use Saloon\Http\Response;
 final class EventsResource extends BaseResource
 {
     /**
+     * Exposing events from the core utility.
+     *
      * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events
      *
      * @throws FatalRequestException|RequestException
@@ -29,6 +31,9 @@ final class EventsResource extends BaseResource
     }
 
     /**
+     * Exposing events from the core utility, pre-filtered to show only LocalChangeDetected and RemoteChangeDetected
+     * event types.
+     *
      * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events-disk
      *
      * @throws FatalRequestException|RequestException

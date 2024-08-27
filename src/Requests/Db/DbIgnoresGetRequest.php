@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the content of the .stignore as the ignore field for folder.
+ *
  * @see https://docs.syncthing.net/rest/db-ignores-get.html  Documentation
  */
 final class DbIgnoresGetRequest extends Request

@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Remove records about a pending remote device which tried to connect.
+ *
  * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html  Documentation
  */
 final class ClusterPendingDevicesDeleteRequest extends Request

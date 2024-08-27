@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns a strong random generated string (alphanumeric) of the specified length.
+ *
  * @see https://docs.syncthing.net/rest/svc-random-string-get.html  Documentation
  */
 final class SvcRandomStringGetRequest extends Request

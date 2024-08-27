@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Post with empty body to immediately restart Syncthing.
+ *
  * @see https://docs.syncthing.net/rest/system-restart-post.html  Documentation
  */
 final class SystemRestartPostRequest extends Request

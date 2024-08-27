@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Verifies and formats a device ID.
+ *
  * @see https://docs.syncthing.net/rest/svc-deviceid-get.html  Documentation
  */
 final class SvcDeviceidGetRequest extends Request

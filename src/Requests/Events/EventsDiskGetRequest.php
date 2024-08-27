@@ -8,9 +8,11 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 use function array_filter;
-use function implode;
 
 /**
+ * Exposing events from the core utility, pre-filtered to show only LocalChangeDetected and RemoteChangeDetected
+ * event types.
+ *
  * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events-disk  Documentation
  */
 final class EventsDiskGetRequest extends Request

@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns a template folder configuration object with all default values.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
  */
 final class ConfigDefaultsFolderGetRequest extends Request

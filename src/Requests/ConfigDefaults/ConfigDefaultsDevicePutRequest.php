@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Replaces the default device configuration. Omitted values are reset to the hard-coded defaults.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
  */
 final class ConfigDefaultsDevicePutRequest extends Request implements HasBody

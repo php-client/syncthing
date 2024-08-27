@@ -11,6 +11,8 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Returns the list of recent log entries.
+ *
  * @see https://docs.syncthing.net/rest/system-log-get.html#get-rest-system-log  Documentation
  */
 final class SystemLogGetRequest extends Request

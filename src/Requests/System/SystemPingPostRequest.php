@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns a {"ping": "pong"} object.
+ *
  * @see https://docs.syncthing.net/rest/system-ping-post.html  Documentation
  */
 final class SystemPingPostRequest extends Request

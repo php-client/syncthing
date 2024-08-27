@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns information about current system status and resource usage.
+ *
  * @see https://docs.syncthing.net/rest/system-status-get.html  Documentation
  */
 final class SystemStatusGetRequest extends Request

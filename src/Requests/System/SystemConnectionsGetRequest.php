@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the list of configured devices and some metadata associated with them.
+ *
  * @see https://docs.syncthing.net/rest/system-connections-get.html  Documentation
  */
 final class SystemConnectionsGetRequest extends Request

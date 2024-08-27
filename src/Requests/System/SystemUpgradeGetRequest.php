@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Checks for a possible upgrade and returns an object describing the newest version and upgrade possibility.
+ *
  * @see https://docs.syncthing.net/rest/system-upgrade-get.html  Documentation
  */
 final class SystemUpgradeGetRequest extends Request

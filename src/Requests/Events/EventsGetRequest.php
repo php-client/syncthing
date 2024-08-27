@@ -11,6 +11,8 @@ use function array_filter;
 use function implode;
 
 /**
+ * Exposing events from the core utility.
+ *
  * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events  Documentation
  */
 final class EventsGetRequest extends Request

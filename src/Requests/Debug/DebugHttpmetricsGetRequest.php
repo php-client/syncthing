@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns statistics about each served REST API endpoint, to diagnose how much time was spent generating the responses.
+ *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-httpmetrics  Documentation
  */
 final class DebugHttpmetricsGetRequest extends Request

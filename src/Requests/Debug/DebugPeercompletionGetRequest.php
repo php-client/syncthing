@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Summarizes the completion percentage for each remote device.
+ *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-peercompletion  Documentation
  */
 final class DebugPeercompletionGetRequest extends Request

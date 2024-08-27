@@ -8,6 +8,11 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Collects information about the running instance for troubleshooting purposes.
+ *
+ * Returns a “support bundle” as a zipped archive, which should be sent to the developers after verifying
+ * it contains no sensitive personal information.
+ *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-support  Documentation
  */
 final class DebugSupportGetRequest extends Request

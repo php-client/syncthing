@@ -38,6 +38,10 @@ use Saloon\Http\Response;
 final class SystemResource extends BaseResource
 {
     /**
+     * Returns a list of directories matching the path given by the optional parameter current.
+     *
+     * If the option current is not given, filesystem root paths are returned.
+     *
      * @see https://docs.syncthing.net/rest/system-browse-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -52,6 +56,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the list of configured devices and some metadata associated with them.
+     *
      * @see https://docs.syncthing.net/rest/system-connections-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -64,6 +70,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the set of debug facilities and which of them are currently enabled.
+     *
      * @see https://docs.syncthing.net/rest/system-debug-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -76,6 +84,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Enables or disables debugging for specified facilities.
+     *
      * @see https://docs.syncthing.net/rest/system-debug-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -91,6 +101,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the contents of the local discovery cache.
+     *
      * @see https://docs.syncthing.net/rest/system-discovery-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -103,6 +115,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Remove all recent errors.
+     *
      * @see https://docs.syncthing.net/rest/system-error-clear-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -115,6 +129,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the list of recent errors.
+     *
      * @see https://docs.syncthing.net/rest/system-error-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -127,6 +143,10 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Post with an error message to register a new error.
+     *
+     * The new error will be displayed on any active GUI clients.
+     *
      * @see https://docs.syncthing.net/rest/system-error-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -141,6 +161,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the list of recent log entries.
+     *
      * @see https://docs.syncthing.net/rest/system-log-get.html#get-rest-system-log  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -155,6 +177,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the list of recent log entries, formatted as a text log.
+     *
      * @see https://docs.syncthing.net/rest/system-log-get.html#get-rest-system-log-txt  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -169,6 +193,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the path locations used internally for storing configuration, database, and others.
+     *
      * @see https://docs.syncthing.net/rest/system-paths-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -181,6 +207,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Pause the given device or all devices.
+     *
      * @see https://docs.syncthing.net/rest/system-pause-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -195,6 +223,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns a {"ping": "pong"} object.
+     *
      * @see https://docs.syncthing.net/rest/system-ping-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -207,6 +237,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns a {"ping": "pong"} object.
+     *
      * @see https://docs.syncthing.net/rest/system-ping-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -219,6 +251,10 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Erase the current index database and restart Syncthing.
+     *
+     * By specifying the folder parameter with a valid folder ID, only information for that folder will be erased.
+     *
      * @see https://docs.syncthing.net/rest/system-reset-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -233,6 +269,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Post with empty body to immediately restart Syncthing.
+     *
      * @see https://docs.syncthing.net/rest/system-restart-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -245,6 +283,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Resume the given device or all devices.
+     *
      * @see https://docs.syncthing.net/rest/system-resume-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -259,6 +299,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Cause Syncthing to exit and not restart.
+     *
      * @see https://docs.syncthing.net/rest/system-shutdown-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -271,6 +313,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns information about current system status and resource usage.
+     *
      * @see https://docs.syncthing.net/rest/system-status-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -283,6 +327,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Checks for a possible upgrade and returns an object describing the newest version and upgrade possibility.
+     *
      * @see https://docs.syncthing.net/rest/system-upgrade-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -295,6 +341,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Perform an upgrade to the newest released version and restart.
+     *
      * @see https://docs.syncthing.net/rest/system-upgrade-post.html  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -307,6 +355,8 @@ final class SystemResource extends BaseResource
     }
 
     /**
+     * Returns the current Syncthing version information.
+     *
      * @see https://docs.syncthing.net/rest/system-version-get.html  Documentation
      *
      * @throws FatalRequestException|RequestException

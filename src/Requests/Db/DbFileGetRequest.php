@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns most data available about a given file, including version and availability.
+ *
  * @see https://docs.syncthing.net/rest/db-file-get.html  Documentation
  */
 final class DbFileGetRequest extends Request

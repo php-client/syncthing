@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the data sent in the anonymous usage report.
+ *
  * @see https://docs.syncthing.net/rest/svc-report-get.html  Documentation
  */
 final class SvcReportGetRequest extends Request

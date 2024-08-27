@@ -21,6 +21,8 @@ use Saloon\Http\Response;
 final class DebugResource extends BaseResource
 {
     /**
+     * Summarizes the completion percentage for each remote device.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-peercompletion  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -33,6 +35,9 @@ final class DebugResource extends BaseResource
     }
 
     /**
+     * Returns statistics about each served REST API endpoint, to diagnose how much time was spent generating
+     * the responses.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-httpmetrics  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -45,6 +50,8 @@ final class DebugResource extends BaseResource
     }
 
     /**
+     * Used to capture a profile of what Syncthing is doing on the CPU.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-cpuprof  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -57,6 +64,8 @@ final class DebugResource extends BaseResource
     }
 
     /**
+     * Used to capture a profile of what Syncthing is doing with the heap memory.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-heapprof  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -69,6 +78,11 @@ final class DebugResource extends BaseResource
     }
 
     /**
+     * Collects information about the running instance for troubleshooting purposes.
+     *
+     * Returns a “support bundle” as a zipped archive, which should be sent to the developers after verifying
+     * it contains no sensitive personal information.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-support  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -81,6 +95,8 @@ final class DebugResource extends BaseResource
     }
 
     /**
+     * Shows diagnostics about a certain file in a shared folder.
+     *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-file  Documentation
      *
      * @throws FatalRequestException|RequestException

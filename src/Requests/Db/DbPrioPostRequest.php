@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Moves the file to the top of the download queue.
+ *
  * @see https://docs.syncthing.net/rest/db-prio-post.html  Documentation
  */
 final class DbPrioPostRequest extends Request

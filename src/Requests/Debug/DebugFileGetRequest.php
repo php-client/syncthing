@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Shows diagnostics about a certain file in a shared folder.
+ *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-file  Documentation
  */
 final class DebugFileGetRequest extends Request

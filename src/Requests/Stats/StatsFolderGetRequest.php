@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns general statistics about folders.
+ *
  * @see https://docs.syncthing.net/rest/stats-folder-get.html  Documentation
  */
 final class StatsFolderGetRequest extends Request

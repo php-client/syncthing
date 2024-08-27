@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Lists remote devices which have tried to connect, but are not yet configured in our instance.
+ *
  * @see https://docs.syncthing.net/rest/cluster-pending-devices-get.html  Documentation
  */
 final class ClusterPendingDevicesGetRequest extends Request

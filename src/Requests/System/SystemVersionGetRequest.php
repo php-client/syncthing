@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the current Syncthing version information.
+ *
  * @see https://docs.syncthing.net/rest/system-version-get.html  Documentation
  */
 final class SystemVersionGetRequest extends Request

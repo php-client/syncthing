@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Replace config of the device for the given ID.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
  */
 final class ConfigDevicesDevicePutRequest extends Request implements HasBody

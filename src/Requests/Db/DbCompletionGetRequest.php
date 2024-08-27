@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Returns the completion percentage (0 to 100) and byte / item counts.
+ *
  * https://docs.syncthing.net/rest/db-completion-get.html  Documentation
  */
 final class DbCompletionGetRequest extends Request

@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the list of archived files that could be recovered.
+ *
  * @see https://docs.syncthing.net/rest/folder-versions-get.html  Documentation
  */
 final class FolderVersionsGetRequest extends Request

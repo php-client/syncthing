@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns all devices as an array.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
  */
 final class ConfigDevicesGetRequest extends Request

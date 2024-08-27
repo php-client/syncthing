@@ -23,6 +23,8 @@ use Saloon\Http\Response;
 final class ConfigDefaultsResource extends BaseResource
 {
     /**
+     * Returns a template folder configuration object with all default values.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -35,6 +37,8 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Replaces the default folder configuration. Omitted values are reset to the hard-coded defaults.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -49,6 +53,8 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Replaces part of default folder configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -63,6 +69,8 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Returns a template device configuration object with all default values.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -75,6 +83,8 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Replaces the default device configuration. Omitted values are reset to the hard-coded defaults.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -89,6 +99,8 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Replaces part of default device configuration.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -103,6 +115,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Returns an object with a single lines attribute listing ignore patterns to be used by default on folders,
+     * as an array of single-line strings.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
      *
      * @throws FatalRequestException|RequestException
@@ -115,6 +130,9 @@ final class ConfigDefaultsResource extends BaseResource
     }
 
     /**
+     * Replaces an object with a single lines attribute listing ignore patterns to be used by default on folders,
+     * as an array of single-line strings.
+     *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
      *
      * @throws FatalRequestException|RequestException

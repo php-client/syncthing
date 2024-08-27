@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns a health status.
+ *
  * @see https://docs.syncthing.net/rest/noauth-health-get.html#get-rest-noauth-health  Documentation
  */
 final class NoauthHealthGetRequest extends Request

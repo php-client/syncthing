@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the path locations used internally for storing configuration, database, and others.
+ *
  * @see https://docs.syncthing.net/rest/system-paths-get.html  Documentation
  */
 final class SystemPathsGetRequest extends Request

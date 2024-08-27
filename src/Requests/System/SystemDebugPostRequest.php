@@ -11,6 +11,8 @@ use function array_filter;
 use function implode;
 
 /**
+ * Enables or disables debugging for specified facilities.
+ *
  * @see https://docs.syncthing.net/rest/system-debug-post.html  Documentation
  */
 final class SystemDebugPostRequest extends Request

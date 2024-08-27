@@ -10,6 +10,8 @@ use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
 /**
+ * Restore archived versions of a given set of files.
+ *
  * @see https://docs.syncthing.net/rest/folder-versions-post.html  Documentation
  */
 final class FolderVersionsPostRequest extends Request implements HasBody

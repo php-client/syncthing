@@ -10,6 +10,10 @@ use Saloon\Http\Request;
 use function array_filter;
 
 /**
+ * Erase the current index database and restart Syncthing.
+ *
+ * By specifying the folder parameter with a valid folder ID, only information for that folder will be erased.
+ *
  * @see https://docs.syncthing.net/rest/system-reset-post.html  Documentation
  */
 final class SystemResetPostRequest extends Request

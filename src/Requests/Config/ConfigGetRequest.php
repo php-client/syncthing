@@ -8,6 +8,8 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 /**
+ * Returns the entire config.
+ *
  * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
  */
 final class ConfigGetRequest extends Request
