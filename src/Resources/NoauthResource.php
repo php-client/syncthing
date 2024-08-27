@@ -15,7 +15,6 @@ use Saloon\Http\Response;
  */
 final class NoauthResource extends BaseResource
 {
-    //todo: GET /rest/noauth/health
     /**
      * @see https://docs.syncthing.net/rest/noauth-health-get.html#get-rest-noauth-health  Documentation
      *
