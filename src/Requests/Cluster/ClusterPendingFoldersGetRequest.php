@@ -14,8 +14,20 @@ final class ClusterPendingFoldersGetRequest extends Request
 {
     protected Method $method = Method::GET;
 
+    public function __construct(
+        private readonly string $device,
+    ) {
+    }
+
     public function resolveEndpoint(): string
     {
         return '/rest/cluster/pending/folders';
+    }
+
+    protected function defaultQuery(): array
+    {
+        return [
+            'device' => $this->device,
+        ];
     }
 }

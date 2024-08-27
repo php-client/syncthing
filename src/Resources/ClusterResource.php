@@ -49,10 +49,12 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingFoldersGet(): Response
+    public function pendingFoldersGet(?string $device = null): Response
     {
         return $this->connector->send(
-            request: new ClusterPendingFoldersGetRequest(),
+            request: new ClusterPendingFoldersGetRequest(
+                device: $device,
+            ),
         );
     }
 
