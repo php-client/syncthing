@@ -17,131 +17,95 @@ use PhpClient\Syncthing\Resources\NoauthResource;
 use PhpClient\Syncthing\Resources\StatsResource;
 use PhpClient\Syncthing\Resources\SvcResource;
 use PhpClient\Syncthing\Resources\SystemResource;
-use PhpClient\Syncthing\Responses\SyncthingResponse;
-use Saloon\Http\Auth\TokenAuthenticator;
-use Saloon\Http\Connector;
+use Saloon\Http\BaseResource;
 
-/**
- * @see https://docs.syncthing.net/dev/rest.html  Documentation
- */
-final class SyncthingClient extends Connector
+final class Api extends BaseResource
 {
-    protected ?string $response = SyncthingResponse::class;
-
-    public function __construct(
-        private readonly string $token,
-        private readonly string $baseUrl,
-    ) {
-    }
-
-    public function resolveBaseUrl(): string
-    {
-        return $this->baseUrl;
-    }
-
-    protected function defaultHeaders(): array
-    {
-        return [
-            'Accept' => 'application/json',
-            'Content-Type' => 'application/json',
-        ];
-    }
-
-    /**
-     * @see https://docs.syncthing.net/dev/rest.html#api-key  Documentation
-     */
-    protected function defaultAuth(): TokenAuthenticator
-    {
-        return new TokenAuthenticator(
-            token: $this->token,
-        );
-    }
-
-    public function configResource(): ConfigResource
+    public function config(): ConfigResource
     {
         return new ConfigResource(
             connector: $this,
         );
     }
 
-    public function configFoldersResource(): ConfigFoldersResource
+    public function configFolders(): ConfigFoldersResource
     {
         return new ConfigFoldersResource(
             connector: $this,
         );
     }
 
-    public function configDevicesResource(): ConfigDevicesResource
+    public function configDevices(): ConfigDevicesResource
     {
         return new ConfigDevicesResource(
             connector: $this,
         );
     }
 
-    public function configDefaultsResource(): ConfigDefaultsResource
+    public function configDefaults(): ConfigDefaultsResource
     {
         return new ConfigDefaultsResource(
             connector: $this,
         );
     }
 
-    public function systemResource(): SystemResource
+    public function system(): SystemResource
     {
         return new SystemResource(
             connector: $this,
         );
     }
 
-    public function clusterResource(): ClusterResource
+    public function cluster(): ClusterResource
     {
         return new ClusterResource(
             connector: $this,
         );
     }
 
-    public function folderResource(): FolderResource
+    public function folder(): FolderResource
     {
         return new FolderResource(
             connector: $this,
         );
     }
 
-    public function dbResource(): DbResource
+    public function db(): DbResource
     {
         return new DbResource(
             connector: $this,
         );
     }
 
-    public function eventsResource(): EventsResource
+    public function events(): EventsResource
     {
         return new EventsResource(
             connector: $this,
         );
     }
 
-    public function statsResource(): StatsResource
+    public function stats(): StatsResource
     {
         return new StatsResource(
             connector: $this,
         );
     }
 
-    public function svcResource(): SvcResource
+    public function svc(): SvcResource
     {
         return new SvcResource(
             connector: $this,
         );
     }
 
-    public function debugResource(): DebugResource
+    public function debug(): DebugResource
     {
         return new DebugResource(
             connector: $this,
         );
     }
 
-    public function noauthResource(): NoauthResource
+    public function noauth(): NoauthResource
     {
         return new NoauthResource(
             connector: $this,
