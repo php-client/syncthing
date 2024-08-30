@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns a strong random generated string (alphanumeric) of the specified length.
  *
  * @see https://docs.syncthing.net/rest/svc-random-string-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SvcRandomStringGetRequest extends Request
 {

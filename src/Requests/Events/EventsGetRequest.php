@@ -14,6 +14,7 @@ use function implode;
  * Exposing events from the core utility.
  *
  * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class EventsGetRequest extends Request
 {

@@ -15,6 +15,7 @@ use function array_filter;
  * If the option current is not given, filesystem root paths are returned.
  *
  * @see https://docs.syncthing.net/rest/system-browse-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemBrowseGetRequest extends Request
 {

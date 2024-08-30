@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns general statistics about folders.
  *
  * @see https://docs.syncthing.net/rest/stats-folder-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class StatsFolderGetRequest extends Request
 {

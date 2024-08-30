@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns most data available about a given file, including version and availability.
  *
  * @see https://docs.syncthing.net/rest/db-file-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbFileGetRequest extends Request
 {

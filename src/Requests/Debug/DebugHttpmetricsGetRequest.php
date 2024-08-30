@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns statistics about each served REST API endpoint, to diagnose how much time was spent generating the responses.
  *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-httpmetrics  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DebugHttpmetricsGetRequest extends Request
 {

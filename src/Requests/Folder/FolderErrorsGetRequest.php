@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the list of errors encountered during scanning or pulling.
  *
  * @see https://docs.syncthing.net/rest/folder-errors-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class FolderErrorsGetRequest extends Request
 {

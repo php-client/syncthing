@@ -13,6 +13,7 @@ use function array_filter;
  * Resume the given device or all devices.
  *
  * @see https://docs.syncthing.net/rest/system-resume-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemResumePostRequest extends Request
 {

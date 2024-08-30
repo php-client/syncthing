@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Remove records about a pending remote device which tried to connect.
  *
  * @see https://docs.syncthing.net/rest/cluster-pending-devices-delete.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ClusterPendingDevicesDeleteRequest extends Request
 {

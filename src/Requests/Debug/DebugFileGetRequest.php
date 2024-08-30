@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Shows diagnostics about a certain file in a shared folder.
  *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-file  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DebugFileGetRequest extends Request
 {

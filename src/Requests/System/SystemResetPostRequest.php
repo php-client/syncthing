@@ -15,6 +15,7 @@ use function array_filter;
  * By specifying the folder parameter with a valid folder ID, only information for that folder will be erased.
  *
  * @see https://docs.syncthing.net/rest/system-reset-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemResetPostRequest extends Request
 {

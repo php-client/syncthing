@@ -18,6 +18,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigFoldersResource extends BaseResource
 {
@@ -25,6 +26,7 @@ final class ConfigFoldersResource extends BaseResource
      * Returns all folders as an array.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -37,6 +39,7 @@ final class ConfigFoldersResource extends BaseResource
 
     /**
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -53,6 +56,7 @@ final class ConfigFoldersResource extends BaseResource
      * Takes an array of folders. If a given folders already exists, they are replaced, otherwise a new ones are added.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -69,6 +73,7 @@ final class ConfigFoldersResource extends BaseResource
      * Returns the folder for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -85,6 +90,7 @@ final class ConfigFoldersResource extends BaseResource
      * Replace config of the folder for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -102,6 +108,7 @@ final class ConfigFoldersResource extends BaseResource
      * Replace part of config of the folder for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -119,6 +126,7 @@ final class ConfigFoldersResource extends BaseResource
      * Removes the folder for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

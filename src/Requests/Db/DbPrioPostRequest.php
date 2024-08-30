@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Moves the file to the top of the download queue.
  *
  * @see https://docs.syncthing.net/rest/db-prio-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbPrioPostRequest extends Request
 {

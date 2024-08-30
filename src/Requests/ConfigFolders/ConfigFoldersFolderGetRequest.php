@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the folder for the given ID.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigFoldersFolderGetRequest extends Request
 {

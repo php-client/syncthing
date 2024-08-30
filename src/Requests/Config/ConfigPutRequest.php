@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Replaces the entire config.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigPutRequest extends Request implements HasBody
 {

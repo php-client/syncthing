@@ -19,6 +19,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigDefaultsResource extends BaseResource
 {
@@ -26,6 +27,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Returns a template folder configuration object with all default values.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -40,6 +42,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Replaces the default folder configuration. Omitted values are reset to the hard-coded defaults.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -56,6 +59,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Replaces part of default folder configuration.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -72,6 +76,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Returns a template device configuration object with all default values.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -86,6 +91,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Replaces the default device configuration. Omitted values are reset to the hard-coded defaults.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -102,6 +108,7 @@ final class ConfigDefaultsResource extends BaseResource
      * Replaces part of default device configuration.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -119,6 +126,7 @@ final class ConfigDefaultsResource extends BaseResource
      * as an array of single-line strings.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -134,6 +142,7 @@ final class ConfigDefaultsResource extends BaseResource
      * as an array of single-line strings.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

@@ -14,6 +14,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * as an array of single-line strings.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-ignores  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigDefaultsIgnoresPutRequest extends Request implements HasBody
 {

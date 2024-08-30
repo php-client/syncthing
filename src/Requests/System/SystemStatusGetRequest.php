@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns information about current system status and resource usage.
  *
  * @see https://docs.syncthing.net/rest/system-status-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemStatusGetRequest extends Request
 {

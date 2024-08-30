@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Takes an array of folders. If a given folders already exists, they are replaced, otherwise a new ones are added.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigFoldersPutRequest extends Request implements HasBody
 {

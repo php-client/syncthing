@@ -17,6 +17,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/rest/debug.html#debug-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DebugResource extends BaseResource
 {
@@ -24,6 +25,7 @@ final class DebugResource extends BaseResource
      * Summarizes the completion percentage for each remote device.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-peercompletion  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -39,6 +41,7 @@ final class DebugResource extends BaseResource
      * the responses.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-httpmetrics  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -53,6 +56,7 @@ final class DebugResource extends BaseResource
      * Used to capture a profile of what Syncthing is doing on the CPU.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-cpuprof  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -67,6 +71,7 @@ final class DebugResource extends BaseResource
      * Used to capture a profile of what Syncthing is doing with the heap memory.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-heapprof  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -84,6 +89,7 @@ final class DebugResource extends BaseResource
      * it contains no sensitive personal information.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-support  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -98,6 +104,7 @@ final class DebugResource extends BaseResource
      * Shows diagnostics about a certain file in a shared folder.
      *
      * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-file  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

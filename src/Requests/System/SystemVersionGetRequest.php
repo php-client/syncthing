@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the current Syncthing version information.
  *
  * @see https://docs.syncthing.net/rest/system-version-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemVersionGetRequest extends Request
 {

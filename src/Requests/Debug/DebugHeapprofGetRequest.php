@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Used to capture a profile of what Syncthing is doing with the heap memory.
  *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-heapprof  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DebugHeapprofGetRequest extends Request
 {

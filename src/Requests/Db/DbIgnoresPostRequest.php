@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Updates the content of the .stignore for folder.
  *
  * @see https://docs.syncthing.net/rest/db-ignores-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbIgnoresPostRequest extends Request implements HasBody
 {

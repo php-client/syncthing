@@ -14,6 +14,7 @@ use Saloon\Http\Request;
  * it contains no sensitive personal information.
  *
  * @see https://docs.syncthing.net/rest/debug.html#get-rest-debug-support  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DebugSupportGetRequest extends Request
 {

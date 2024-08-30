@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the entire config.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigGetRequest extends Request
 {

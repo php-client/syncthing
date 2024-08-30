@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Remove records about a pending folder announced from a remote device.
  *
  * @see https://docs.syncthing.net/rest/cluster-pending-folders-delete.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ClusterPendingFoldersDeleteRequest extends Request
 {

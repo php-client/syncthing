@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Replaces GUI configuration.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-options-rest-config-ldap-rest-config-gui  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigGuiPutRequest extends Request implements HasBody
 {

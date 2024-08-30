@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns a health status.
  *
  * @see https://docs.syncthing.net/rest/noauth-health-get.html#get-rest-noauth-health  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class NoauthHealthGetRequest extends Request
 {

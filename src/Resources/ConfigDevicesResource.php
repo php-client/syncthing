@@ -18,6 +18,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/rest/config.html#config-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigDevicesResource extends BaseResource
 {
@@ -25,6 +26,7 @@ final class ConfigDevicesResource extends BaseResource
      * Returns all devices as an array.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -39,6 +41,7 @@ final class ConfigDevicesResource extends BaseResource
      * Takes a single device. If a given device already exists, it’s replaced, otherwise a new one is added.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -55,6 +58,7 @@ final class ConfigDevicesResource extends BaseResource
      * Takes an array of devices. If a given devices already exists, they are replaced, otherwise a new ones are added.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-rest-config-devices  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -71,6 +75,7 @@ final class ConfigDevicesResource extends BaseResource
      * Returns the device for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -87,6 +92,7 @@ final class ConfigDevicesResource extends BaseResource
      * Replace config of the device for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -104,6 +110,7 @@ final class ConfigDevicesResource extends BaseResource
      * Replace part of config of the device for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -121,6 +128,7 @@ final class ConfigDevicesResource extends BaseResource
      * Removes the device for the given ID.
      *
      * @see https://docs.syncthing.net/rest/config.html#rest-config-folders-id-rest-config-devices-id  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

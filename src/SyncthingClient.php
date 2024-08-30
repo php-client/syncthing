@@ -21,6 +21,9 @@ use PhpClient\Syncthing\Responses\SyncthingResponse;
 use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
 
+/**
+ * @see https://docs.syncthing.net/dev/rest.html  Documentation
+ */
 final class SyncthingClient extends Connector
 {
     protected ?string $response = SyncthingResponse::class;
@@ -44,6 +47,9 @@ final class SyncthingClient extends Connector
         ];
     }
 
+    /**
+     * @see https://docs.syncthing.net/dev/rest.html#api-key  Documentation
+     */
     protected function defaultAuth(): TokenAuthenticator
     {
         return new TokenAuthenticator(

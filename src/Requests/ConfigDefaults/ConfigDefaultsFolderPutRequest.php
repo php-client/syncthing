@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Replaces the default folder configuration. Omitted values are reset to the hard-coded defaults.
  *
  * @see https://docs.syncthing.net/rest/config.html#rest-config-defaults-folder-rest-config-defaults-device  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class ConfigDefaultsFolderPutRequest extends Request implements HasBody
 {

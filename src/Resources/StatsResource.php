@@ -13,6 +13,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/dev/rest.html#statistics-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class StatsResource extends BaseResource
 {
@@ -20,6 +21,7 @@ final class StatsResource extends BaseResource
      * Returns general statistics about devices.
      *
      * @see https://docs.syncthing.net/rest/stats-device-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -34,6 +36,7 @@ final class StatsResource extends BaseResource
      * Returns general statistics about folders.
      *
      * @see https://docs.syncthing.net/rest/stats-folder-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

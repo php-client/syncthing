@@ -23,7 +23,8 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/dev/rest.html#database-endpoints
+ * @see https://docs.syncthing.net/dev/rest.html#database-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbResource extends BaseResource
 {
@@ -31,6 +32,7 @@ final class DbResource extends BaseResource
      * Returns the directory tree of the global model.
      *
      * @see https://docs.syncthing.net/rest/db-browse-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -49,6 +51,7 @@ final class DbResource extends BaseResource
      * Returns the completion percentage (0 to 100) and byte / item counts.
      *
      * @see https://docs.syncthing.net/rest/db-completion-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -66,6 +69,7 @@ final class DbResource extends BaseResource
      * Returns most data available about a given file, including version and availability.
      *
      * @see https://docs.syncthing.net/rest/db-file-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -83,6 +87,7 @@ final class DbResource extends BaseResource
      * Returns the content of the .stignore as the ignore field for folder.
      *
      * @see https://docs.syncthing.net/rest/db-ignores-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -99,6 +104,7 @@ final class DbResource extends BaseResource
      * Updates the content of the .stignore for folder.
      *
      * @see https://docs.syncthing.net/rest/db-ignores-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -116,6 +122,7 @@ final class DbResource extends BaseResource
      * Returns the list of files which were changed locally in a receive-only folder.
      *
      * @see https://docs.syncthing.net/rest/db-localchanged-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -132,6 +139,7 @@ final class DbResource extends BaseResource
      * Returns lists of files which are needed by this device in order for it to become in sync.
      *
      * @see https://docs.syncthing.net/rest/db-need-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -151,6 +159,7 @@ final class DbResource extends BaseResource
      * This API call does nothing if the folder is not a send only folder.
      *
      * @see https://docs.syncthing.net/rest/db-override-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -167,6 +176,7 @@ final class DbResource extends BaseResource
      * Moves the file to the top of the download queue.
      *
      * @see https://docs.syncthing.net/rest/db-prio-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -185,6 +195,7 @@ final class DbResource extends BaseResource
      * with the shared folder.
      *
      * @see https://docs.syncthing.net/rest/db-remoteneed-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -205,6 +216,7 @@ final class DbResource extends BaseResource
      * This API call does nothing if the folder is not a receive only folder.
      *
      * @see https://docs.syncthing.net/rest/db-revert-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -224,6 +236,7 @@ final class DbResource extends BaseResource
      * noticing the deletion of the path in question.
      *
      * @see https://docs.syncthing.net/rest/db-scan-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -242,6 +255,7 @@ final class DbResource extends BaseResource
      * Returns information about the current status of a folder.
      *
      * @see https://docs.syncthing.net/rest/db-status-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -249,7 +263,8 @@ final class DbResource extends BaseResource
     {
         return $this->connector->send(
             request: new DbStatusGetRequest(
-                folder: $folder),
+                folder: $folder,
+            ),
         );
     }
 }

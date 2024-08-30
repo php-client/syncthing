@@ -12,6 +12,7 @@ use Saloon\Http\Request;
  * with the shared folder.
  *
  * @see https://docs.syncthing.net/rest/db-remoteneed-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbRemoteneedGetRequest extends Request
 {

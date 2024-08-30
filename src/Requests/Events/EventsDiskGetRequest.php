@@ -14,6 +14,7 @@ use function array_filter;
  * event types.
  *
  * @see https://docs.syncthing.net/rest/events-get.html#get-rest-events-disk  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class EventsDiskGetRequest extends Request
 {

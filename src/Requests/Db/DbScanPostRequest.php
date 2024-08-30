@@ -16,6 +16,7 @@ use function array_filter;
  * noticing the deletion of the path in question.
  *
  * @see https://docs.syncthing.net/rest/db-scan-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbScanPostRequest extends Request
 {

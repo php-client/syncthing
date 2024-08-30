@@ -14,6 +14,7 @@ use function implode;
  * Enables or disables debugging for specified facilities.
  *
  * @see https://docs.syncthing.net/rest/system-debug-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemDebugPostRequest extends Request
 {

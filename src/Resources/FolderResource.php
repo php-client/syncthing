@@ -13,7 +13,8 @@ use Saloon\Http\BaseResource;
 use Saloon\Http\Response;
 
 /**
- * @see https://docs.syncthing.net/dev/rest.html#folder-endpoints  Documentaion
+ * @see https://docs.syncthing.net/dev/rest.html#folder-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class FolderResource extends BaseResource
 {
@@ -21,6 +22,7 @@ final class FolderResource extends BaseResource
      * Returns the list of errors encountered during scanning or pulling.
      *
      * @see https://docs.syncthing.net/rest/folder-errors-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -37,6 +39,7 @@ final class FolderResource extends BaseResource
      * Returns the list of archived files that could be recovered.
      *
      * @see https://docs.syncthing.net/rest/folder-versions-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -53,6 +56,7 @@ final class FolderResource extends BaseResource
      * Restore archived versions of a given set of files.
      *
      * @see https://docs.syncthing.net/rest/folder-versions-post.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

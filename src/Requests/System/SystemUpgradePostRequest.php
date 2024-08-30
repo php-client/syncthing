@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Perform an upgrade to the newest released version and restart.
  *
  * @see https://docs.syncthing.net/rest/system-upgrade-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemUpgradePostRequest extends Request
 {

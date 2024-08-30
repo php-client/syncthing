@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the contents of the local discovery cache.
  *
  * @see https://docs.syncthing.net/rest/system-discovery-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemDiscoveryGetRequest extends Request
 {

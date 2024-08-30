@@ -13,6 +13,7 @@ use function array_filter;
  * Returns the completion percentage (0 to 100) and byte / item counts.
  *
  * https://docs.syncthing.net/rest/db-completion-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbCompletionGetRequest extends Request
 {

@@ -15,6 +15,7 @@ use Saloon\Http\Response;
 
 /**
  * @see https://docs.syncthing.net/dev/rest.html#misc-services-endpoints  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SvcResource extends BaseResource
 {
@@ -22,6 +23,7 @@ final class SvcResource extends BaseResource
      * Verifies and formats a device ID.
      *
      * @see https://docs.syncthing.net/rest/svc-deviceid-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -39,6 +41,7 @@ final class SvcResource extends BaseResource
      * sent by the browser.
      *
      * @see https://docs.syncthing.net/rest/svc-lang-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -55,6 +58,7 @@ final class SvcResource extends BaseResource
      * Returns a strong random generated string (alphanumeric) of the specified length.
      *
      * @see https://docs.syncthing.net/rest/svc-random-string-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
@@ -71,6 +75,7 @@ final class SvcResource extends BaseResource
      * Returns the data sent in the anonymous usage report.
      *
      * @see https://docs.syncthing.net/rest/svc-report-get.html  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */

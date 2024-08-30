@@ -14,6 +14,7 @@ use Saloon\Http\Request;
  * This API call does nothing if the folder is not a send only folder.
  *
  * @see https://docs.syncthing.net/rest/db-override-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbOverridePostRequest extends Request
 {

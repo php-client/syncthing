@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the data sent in the anonymous usage report.
  *
  * @see https://docs.syncthing.net/rest/svc-report-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SvcReportGetRequest extends Request
 {

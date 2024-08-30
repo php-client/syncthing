@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the list of files which were changed locally in a receive-only folder.
  *
  * @see https://docs.syncthing.net/rest/db-localchanged-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbLocalchangedGetRequest extends Request
 {

@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the set of debug facilities and which of them are currently enabled.
  *
  * @see https://docs.syncthing.net/rest/system-debug-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemDebugGetRequest extends Request
 {

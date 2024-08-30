@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns the list of archived files that could be recovered.
  *
  * @see https://docs.syncthing.net/rest/folder-versions-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class FolderVersionsGetRequest extends Request
 {

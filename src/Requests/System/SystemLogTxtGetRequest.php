@@ -14,6 +14,7 @@ use function array_filter;
  * Returns the list of recent log entries, formatted as a text log.
  *
  * @see https://docs.syncthing.net/rest/system-log-get.html#get-rest-system-log-txt  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemLogTxtGetRequest extends Request
 {

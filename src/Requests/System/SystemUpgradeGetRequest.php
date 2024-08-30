@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Checks for a possible upgrade and returns an object describing the newest version and upgrade possibility.
  *
  * @see https://docs.syncthing.net/rest/system-upgrade-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class SystemUpgradeGetRequest extends Request
 {

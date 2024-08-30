@@ -13,6 +13,7 @@ use function array_filter;
  * Returns the directory tree of the global model.
  *
  * @see https://docs.syncthing.net/rest/db-browse-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbBrowseGetRequest extends Request
 {

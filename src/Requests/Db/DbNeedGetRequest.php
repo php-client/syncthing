@@ -11,6 +11,7 @@ use Saloon\Http\Request;
  * Returns lists of files which are needed by this device in order for it to become in sync.
  *
  * @see https://docs.syncthing.net/rest/db-need-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class DbNeedGetRequest extends Request
 {

@@ -13,6 +13,7 @@ use Saloon\Traits\Body\HasJsonBody;
  * Restore archived versions of a given set of files.
  *
  * @see https://docs.syncthing.net/rest/folder-versions-post.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class FolderVersionsPostRequest extends Request implements HasBody
 {

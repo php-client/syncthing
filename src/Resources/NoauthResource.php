@@ -14,11 +14,13 @@ use Saloon\Http\Response;
  * Returns a health status.
  *
  * @see https://docs.syncthing.net/rest/noauth-health-get.html  Documentation
+ * @version Relevant for 2024-08-28, API v1.27.10
  */
 final class NoauthResource extends BaseResource
 {
     /**
      * @see https://docs.syncthing.net/rest/noauth-health-get.html#get-rest-noauth-health  Documentation
+     * @version Relevant for 2024-08-28, API v1.27.10
      *
      * @throws FatalRequestException|RequestException
      */
