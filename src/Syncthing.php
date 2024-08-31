@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing;
 
+use PhpClient\Syncthing\Resources\Api;
 use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
 

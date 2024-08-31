@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing\Resources;
 
-use PhpClient\Syncthing\Requests\Debug\DebugCpuprofGetRequest;
-use PhpClient\Syncthing\Requests\Debug\DebugFileGetRequest;
-use PhpClient\Syncthing\Requests\Debug\DebugHeapprofGetRequest;
-use PhpClient\Syncthing\Requests\Debug\DebugHttpmetricsGetRequest;
-use PhpClient\Syncthing\Requests\Debug\DebugPeercompletionGetRequest;
-use PhpClient\Syncthing\Requests\Debug\DebugSupportGetRequest;
+use PhpClient\Syncthing\Requests\Debug\CollectDebugInfoRequest;
+use PhpClient\Syncthing\Requests\Debug\GetCompletionSummaryRequest;
+use PhpClient\Syncthing\Requests\Debug\GetCpuProfileRequest;
+use PhpClient\Syncthing\Requests\Debug\GetDebugInfoAboutFileRequest;
+use PhpClient\Syncthing\Requests\Debug\GetHeapMemoryProfileRequest;
+use PhpClient\Syncthing\Requests\Debug\GetHttpMetricsRequest;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -29,10 +29,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function peercompletionGet(): Response
+    public function getCompletionSummary(): Response
     {
         return $this->connector->send(
-            request: new DebugPeercompletionGetRequest(),
+            request: new GetCompletionSummaryRequest(),
         );
     }
 
@@ -45,10 +45,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function httpmetricsGet(): Response
+    public function getHttpMetrics(): Response
     {
         return $this->connector->send(
-            request: new DebugHttpmetricsGetRequest(),
+            request: new GetHttpMetricsRequest(),
         );
     }
 
@@ -60,10 +60,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function cpuprofGet(): Response
+    public function getCpuProfile(): Response
     {
         return $this->connector->send(
-            request: new DebugCpuprofGetRequest(),
+            request: new GetCpuProfileRequest(),
         );
     }
 
@@ -75,10 +75,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function heapprofGet(): Response
+    public function getHeapMemoryProfile(): Response
     {
         return $this->connector->send(
-            request: new DebugHeapprofGetRequest(),
+            request: new GetHeapMemoryProfileRequest(),
         );
     }
 
@@ -93,10 +93,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function supportGet(): Response
+    public function collectDebugInfo(): Response
     {
         return $this->connector->send(
-            request: new DebugSupportGetRequest(),
+            request: new CollectDebugInfoRequest(),
         );
     }
 
@@ -108,10 +108,10 @@ final class DebugResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function fileGet(string $folder, string $file): Response
+    public function getDebugInfoAboutFile(string $folder, string $file): Response
     {
         return $this->connector->send(
-            request: new DebugFileGetRequest(
+            request: new GetDebugInfoAboutFileRequest(
                 folder: $folder,
                 file: $file,
             ),

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing\Resources;
 
-use PhpClient\Syncthing\Requests\Folder\FolderErrorsGetRequest;
-use PhpClient\Syncthing\Requests\Folder\FolderVersionsGetRequest;
-use PhpClient\Syncthing\Requests\Folder\FolderVersionsPostRequest;
+use PhpClient\Syncthing\Requests\Folder\GetFilesVerionsRequest;
+use PhpClient\Syncthing\Requests\Folder\GetFolderErrorsRequest;
+use PhpClient\Syncthing\Requests\Folder\RestoreFilesVersionsRequest;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -26,10 +26,10 @@ final class FolderResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function errorsGet(string $folder): Response
+    public function getFolderErrors(string $folder): Response
     {
         return $this->connector->send(
-            request: new FolderErrorsGetRequest(
+            request: new GetFolderErrorsRequest(
                 folder: $folder,
             ),
         );
@@ -43,10 +43,10 @@ final class FolderResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function versionsGet(string $folder): Response
+    public function getFilesVersions(string $folder): Response
     {
         return $this->connector->send(
-            request: new FolderVersionsGetRequest(
+            request: new GetFilesVerionsRequest(
                 folder: $folder,
             ),
         );
@@ -60,10 +60,10 @@ final class FolderResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function versionsPost(string $folder, array $data): Response
+    public function restoreFilesVersions(string $folder, array $data): Response
     {
         return $this->connector->send(
-            request: new FolderVersionsPostRequest(
+            request: new RestoreFilesVersionsRequest(
                 folder: $folder,
                 data: $data,
             ),

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing\Resources;
 
-use PhpClient\Syncthing\Requests\Events\EventsDiskGetRequest;
-use PhpClient\Syncthing\Requests\Events\EventsGetRequest;
+use PhpClient\Syncthing\Requests\Events\GetDiskEventsRequest;
+use PhpClient\Syncthing\Requests\Events\GetEvents;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -25,10 +25,10 @@ final class EventsResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function get(?array $events = null, ?int $since = null): Response
+    public function getEvents(?array $events = null, ?int $since = null): Response
     {
         return $this->connector->send(
-            request: new EventsGetRequest(events: $events, since: $since),
+            request: new GetEvents(events: $events, since: $since),
         );
     }
 
@@ -41,10 +41,10 @@ final class EventsResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function diskGet(?int $since = null): Response
+    public function getDiskEvents(?int $since = null): Response
     {
         return $this->connector->send(
-            request: new EventsDiskGetRequest(since: $since),
+            request: new GetDiskEventsRequest(since: $since),
         );
     }
 }

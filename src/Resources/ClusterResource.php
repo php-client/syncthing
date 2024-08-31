@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PhpClient\Syncthing\Resources;
 
-use PhpClient\Syncthing\Requests\Cluster\ClusterPendingDevicesDeleteRequest;
-use PhpClient\Syncthing\Requests\Cluster\ClusterPendingDevicesGetRequest;
-use PhpClient\Syncthing\Requests\Cluster\ClusterPendingFoldersDeleteRequest;
-use PhpClient\Syncthing\Requests\Cluster\ClusterPendingFoldersGetRequest;
+use PhpClient\Syncthing\Requests\Cluster\ListRemotePendingDevicesRequest;
+use PhpClient\Syncthing\Requests\Cluster\ListRemotePendingFoldersRequest;
+use PhpClient\Syncthing\Requests\Cluster\RemoveRecordsAboutRemotePendingDeviceRequest;
+use PhpClient\Syncthing\Requests\Cluster\RemoveRecordsAboutRemotePendingFolderRequest;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -27,10 +27,10 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingDevicesGet(): Response
+    public function listRemotePendingDevices(): Response
     {
         return $this->connector->send(
-            request: new ClusterPendingDevicesGetRequest(),
+            request: new ListRemotePendingDevicesRequest(),
         );
     }
 
@@ -42,10 +42,10 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingDevicesDelete(string $device): Response
+    public function removeRecordsAboutRemotePendingDevice(string $device): Response
     {
         return $this->connector->send(
-            request: new ClusterPendingDevicesDeleteRequest(
+            request: new RemoveRecordsAboutRemotePendingDeviceRequest(
                 device: $device,
             ),
         );
@@ -59,10 +59,10 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingFoldersGet(?string $device = null): Response
+    public function listRemotePendingFolders(?string $device = null): Response
     {
         return $this->connector->send(
-            request: new ClusterPendingFoldersGetRequest(
+            request: new ListRemotePendingFoldersRequest(
                 device: $device,
             ),
         );
@@ -76,10 +76,10 @@ final class ClusterResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pendingFoldersDelete(string $folder): Response
+    public function removeRecordsAboutRemotePendingFolder(string $folder): Response
     {
         return $this->connector->send(
-            request: new ClusterPendingFoldersDeleteRequest(
+            request: new RemoveRecordsAboutRemotePendingFolderRequest(
                 folder: $folder,
             ),
         );

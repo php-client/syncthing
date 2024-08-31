@@ -5,28 +5,28 @@ declare(strict_types=1);
 namespace PhpClient\Syncthing\Resources;
 
 use DateTimeInterface;
-use PhpClient\Syncthing\Requests\System\SystemBrowseGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemConnectionsGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemDebugGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemDebugPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemDiscoveryGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemErrorClearPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemErrorGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemErrorPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemLogGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemLogTxtGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemPathsGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemPausePostRequest;
-use PhpClient\Syncthing\Requests\System\SystemPingGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemPingPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemResetPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemRestartPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemResumePostRequest;
-use PhpClient\Syncthing\Requests\System\SystemShutdownPostRequest;
-use PhpClient\Syncthing\Requests\System\SystemStatusGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemUpgradeGetRequest;
-use PhpClient\Syncthing\Requests\System\SystemUpgradePostRequest;
-use PhpClient\Syncthing\Requests\System\SystemVersionGetRequest;
+use PhpClient\Syncthing\Requests\System\CheckUpgradePossibilityRequest;
+use PhpClient\Syncthing\Requests\System\CreateErrorRequest;
+use PhpClient\Syncthing\Requests\System\DeleteRecentErrorsRequest;
+use PhpClient\Syncthing\Requests\System\EraseIndexRequest;
+use PhpClient\Syncthing\Requests\System\GetDebugFacilitiesRequest;
+use PhpClient\Syncthing\Requests\System\GetDevicesInfoRequest;
+use PhpClient\Syncthing\Requests\System\GetListOfDirectoriesRequest;
+use PhpClient\Syncthing\Requests\System\GetLocalDiscoveryCacheRequest;
+use PhpClient\Syncthing\Requests\System\GetLogAsTextRequest;
+use PhpClient\Syncthing\Requests\System\GetLogRequest;
+use PhpClient\Syncthing\Requests\System\GetPathsRequest;
+use PhpClient\Syncthing\Requests\System\GetRecentErrorsRequest;
+use PhpClient\Syncthing\Requests\System\GetSystemStatusRequest;
+use PhpClient\Syncthing\Requests\System\GetVersionRequest;
+use PhpClient\Syncthing\Requests\System\PauseSyncingRequest;
+use PhpClient\Syncthing\Requests\System\PingPostRequest;
+use PhpClient\Syncthing\Requests\System\PingRequest;
+use PhpClient\Syncthing\Requests\System\RestartRequest;
+use PhpClient\Syncthing\Requests\System\ResumeSyncingRequest;
+use PhpClient\Syncthing\Requests\System\ShutdownRequest;
+use PhpClient\Syncthing\Requests\System\UpdateDebugFacilitiesRequest;
+use PhpClient\Syncthing\Requests\System\UpgradeRequest;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -48,10 +48,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function browseGet(?string $current = null): Response
+    public function getListOfDirectories(?string $current = null): Response
     {
         return $this->connector->send(
-            request: new SystemBrowseGetRequest(
+            request: new GetListOfDirectoriesRequest(
                 current: $current,
             ),
         );
@@ -65,10 +65,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function connectionsGet(): Response
+    public function getDevicesInfo(): Response
     {
         return $this->connector->send(
-            request: new SystemConnectionsGetRequest(),
+            request: new GetDevicesInfoRequest(),
         );
     }
 
@@ -80,10 +80,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function debugGet(): Response
+    public function getDebugFacilities(): Response
     {
         return $this->connector->send(
-            request: new SystemDebugGetRequest(),
+            request: new GetDebugFacilitiesRequest(),
         );
     }
 
@@ -95,10 +95,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function debugPost(?array $enable = null, ?array $disable = null): Response
+    public function updateDebugFacilities(?array $enable = null, ?array $disable = null): Response
     {
         return $this->connector->send(
-            request: new SystemDebugPostRequest(
+            request: new UpdateDebugFacilitiesRequest(
                 enable: $enable,
                 disable: $disable,
             ),
@@ -113,10 +113,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function discoveryGet(): Response
+    public function getLocalDiscoverCache(): Response
     {
         return $this->connector->send(
-            request: new SystemDiscoveryGetRequest(),
+            request: new GetLocalDiscoveryCacheRequest(),
         );
     }
 
@@ -128,10 +128,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function errorClearPost(): Response
+    public function deleteRecentErrors(): Response
     {
         return $this->connector->send(
-            request: new SystemErrorClearPostRequest(),
+            request: new DeleteRecentErrorsRequest(),
         );
     }
 
@@ -143,10 +143,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function errorGet(): Response
+    public function getRecentErrors(): Response
     {
         return $this->connector->send(
-            request: new SystemErrorGetRequest(),
+            request: new GetRecentErrorsRequest(),
         );
     }
 
@@ -160,10 +160,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function errorPost(string $message): Response
+    public function createError(string $message): Response
     {
         return $this->connector->send(
-            request: new SystemErrorPostRequest(
+            request: new CreateErrorRequest(
                 message: $message,
             ),
         );
@@ -177,10 +177,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function logGet(?DateTimeInterface $since = null): Response
+    public function getLog(?DateTimeInterface $since = null): Response
     {
         return $this->connector->send(
-            request: new SystemLogGetRequest(
+            request: new GetLogRequest(
                 since: $since,
             ),
         );
@@ -194,10 +194,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function logTxtGet(?DateTimeInterface $since = null): Response
+    public function getLogAsText(?DateTimeInterface $since = null): Response
     {
         return $this->connector->send(
-            request: new SystemLogTxtGetRequest(
+            request: new GetLogAsTextRequest(
                 since: $since,
             ),
         );
@@ -211,10 +211,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pathsGet(): Response
+    public function getPaths(): Response
     {
         return $this->connector->send(
-            request: new SystemPathsGetRequest(),
+            request: new GetPathsRequest(),
         );
     }
 
@@ -226,10 +226,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pausePost(?string $device = null): Response
+    public function pauseSyncing(?string $device = null): Response
     {
         return $this->connector->send(
-            request: new SystemPausePostRequest(
+            request: new PauseSyncingRequest(
                 device: $device,
             ),
         );
@@ -243,10 +243,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function pingGet(): Response
+    public function ping(): Response
     {
         return $this->connector->send(
-            request: new SystemPingGetRequest(),
+            request: new PingRequest(),
         );
     }
 
@@ -261,7 +261,7 @@ final class SystemResource extends BaseResource
     public function pingPost(): Response
     {
         return $this->connector->send(
-            request: new SystemPingPostRequest(),
+            request: new PingPostRequest(),
         );
     }
 
@@ -275,10 +275,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function resetPost(?string $folder = null): Response
+    public function eraseIndex(?string $folder = null): Response
     {
         return $this->connector->send(
-            request: new SystemResetPostRequest(
+            request: new EraseIndexRequest(
                 folder: $folder,
             ),
         );
@@ -292,10 +292,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function restartPost(): Response
+    public function restart(): Response
     {
         return $this->connector->send(
-            request: new SystemRestartPostRequest(),
+            request: new RestartRequest(),
         );
     }
 
@@ -307,10 +307,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function resumePost(?string $device = null): Response
+    public function resumeSyncing(?string $device = null): Response
     {
         return $this->connector->send(
-            request: new SystemResumePostRequest(
+            request: new ResumeSyncingRequest(
                 device: $device,
             ),
         );
@@ -324,10 +324,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function shutdownPost(): Response
+    public function shutdown(): Response
     {
         return $this->connector->send(
-            request: new SystemShutdownPostRequest(),
+            request: new ShutdownRequest(),
         );
     }
 
@@ -339,10 +339,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function statusGet(): Response
+    public function getSystemStatus(): Response
     {
         return $this->connector->send(
-            request: new SystemStatusGetRequest(),
+            request: new GetSystemStatusRequest(),
         );
     }
 
@@ -354,10 +354,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function upgradeGet(): Response
+    public function checkUpgradePossibility(): Response
     {
         return $this->connector->send(
-            request: new SystemUpgradeGetRequest(),
+            request: new CheckUpgradePossibilityRequest(),
         );
     }
 
@@ -369,10 +369,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function upgradePost(): Response
+    public function upgrade(): Response
     {
         return $this->connector->send(
-            request: new SystemUpgradePostRequest(),
+            request: new UpgradeRequest(),
         );
     }
 
@@ -384,10 +384,10 @@ final class SystemResource extends BaseResource
      *
      * @throws FatalRequestException|RequestException
      */
-    public function versionGet(): Response
+    public function getVersion(): Response
     {
         return $this->connector->send(
-            request: new SystemVersionGetRequest(),
+            request: new GetVersionRequest(),
         );
     }
 }
