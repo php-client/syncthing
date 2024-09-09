@@ -16,10 +16,10 @@ final class Syncthing extends Connector
     public readonly Api $api;
 
     public function __construct(
-        private readonly string $token,
         private readonly string $baseUrl,
+        private readonly string $token,
     ) {
-        $this->api = new Api($this);
+        $this->api = new Api(connector: $this);
     }
 
     public function resolveBaseUrl(): string
