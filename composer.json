@@ -1,5 +1,5 @@
 {
-    "name": "phpclient/syncthing",
+    "name": "php-client/syncthing",
     "description": "PHP Client for Syncthing API",
     "type": "library",
     "require": {
