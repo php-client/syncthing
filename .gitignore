@@ -2,3 +2,5 @@
 vendor
 composer.lock
 .env
+tests/
+phpunit.xml
