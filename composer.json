@@ -1,6 +1,7 @@
 {
     "name": "php-client/syncthing",
     "description": "PHP Client for Syncthing API",
+    "keywords": ["syncthing", "api", "client", "saloon"],
     "type": "library",
     "require": {
         "php": "^8.3",
